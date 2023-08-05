@@ -95,6 +95,7 @@ class SalesPaymentCommand extends Command
         foreach ($fileData as $row) {
             fputcsv($file, $row);
         }
+        
         fclose($file);
 
         $io->success("Sales payment dates for the missing months have been generated and saved to $outputFileName.");
